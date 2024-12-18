@@ -12,6 +12,8 @@
 
 
     <?php include 'include/header.php' ?>
+    <!-- Page Content -->
+    <?php include 'include/gestion.php'; ?>
     <main>
         <section>
             <img class="https://picsum.photos/200/300">
