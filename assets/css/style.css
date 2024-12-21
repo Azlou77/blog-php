@@ -2,9 +2,12 @@ body{
     margin: 0;
     padding: 0;
 }
+
+
+/* header */
 header nav{
-    background-color: white;
-    color: blue;
+    background-color: #F72C5B;
+    color: white;
     display: flex;
     justify-content: center;
     
@@ -12,12 +15,54 @@ header nav{
 nav ul{
     list-style-type: none;
     display: flex;
+    align-items: center;
+
 }
 a{
     text-decoration: none;
     margin-left: 20px;
+    color: white;
 }
+
+
+/* presentation section */
+
+h2{
+    display: flex;
+    justify-content: center;
+}
+
+section#presentation{
+    display: flex;
+    justify-content: center;
+}
+
+section#presentation p{
+    width: 30%;
+   
+}
+section#presentation  img{
+    width: 246px;
+    height: 397px;
+}
+
+/* footer */
 footer{
     display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F72C5B;
+    color: white;
+    height: 100%;
+    margin-top: 64px;
+
+}
+footer section{
+    width: 220px;
+    height: 149px;
+}
+footer ul{
+    list-style-type: none;
+    padding-left: 0px;
 
 }

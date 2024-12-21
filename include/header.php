@@ -5,7 +5,6 @@
             <li><a href="index.php">Home</a></li>
             <li><a href="index.php?blog">Blog entries</a></li>
             <li><a href="index.php?details">Post details</a></li>
-            <li>Contact us</li>
         </ul>
     </nav>
 </header>

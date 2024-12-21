@@ -15,23 +15,11 @@
     <!-- Page Content -->
     <?php include 'include/gestion.php'; ?>
     <main>
-        <section>
-            <img class="https://picsum.photos/200/300">
-            <h2>Title</h2>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat dolorem quaerat, inventore possimus, nisi, quas odio debitis aspernatur quos ratione nihil ipsa? Et nostrum excepturi quam quia, cumque odit qui?
-                Nostrum iure ratione illum soluta optio illo qui enim a voluptas reprehenderit, aspernatur unde, ab impedit quia recusandae natus iusto sint cumque totam libero magnam! Quaerat dolorem fuga aspernatur dolor?
-            </p>
-
-            <img class="https://picsum.photos/200/300">
-            <h2>Title</h2>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat dolorem quaerat, inventore possimus, nisi, quas odio debitis aspernatur quos ratione nihil ipsa? Et nostrum excepturi quam quia, cumque odit qui?
-                Nostrum iure ratione illum soluta optio illo qui enim a voluptas reprehenderit, aspernatur unde, ab impedit quia recusandae natus iusto sint cumque totam libero magnam! Quaerat dolorem fuga aspernatur dolor?
-            </p>
-
-            <img class="https://picsum.photos/200/300">
-            <h2>Title</h2>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat dolorem quaerat, inventore possimus, nisi, quas odio debitis aspernatur quos ratione nihil ipsa? Et nostrum excepturi quam quia, cumque odit qui?
-                Nostrum iure ratione illum soluta optio illo qui enim a voluptas reprehenderit, aspernatur unde, ab impedit quia recusandae natus iusto sint cumque totam libero magnam! Quaerat dolorem fuga aspernatur dolor?
+        <h2>Presentation</h2>
+        <section id="presentation">
+            <img src="assets/images/louis.jpg">
+            <p>Hi I'm Louis a developpper fullstack. I would like to reinforce my skills in languages like JAVA, PHP, JavaScripts but also learn the tools like Docker, Github, Figma, databases etc ...
+                Else I like to visit historic museums, challenge myself with sport, learn in continu. In this project we will see how we construct it, with which tools ? But also see how to fix bugs, collaborate in teams, make plans about the applications etc...
             </p>
         </section>
     </main>
