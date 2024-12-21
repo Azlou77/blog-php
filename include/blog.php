@@ -1,14 +1,15 @@
 <h2>Blog</h2>
 
-<article>
-    <h3>Title 1</h3>
-    <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores corporis, nam nostrum at eaque facilis, ipsum ducimus dignissimos maiores harum magni expedita sunt tempora quam, vel earum inventore nisi magnam!
-        Ipsam deserunt reiciendis ea magnam assumenda quos saepe aspernatur dicta delectus perspiciatis voluptatem necessitatibus, non corporis. Voluptatibus corporis repellat, aspernatur, exercitationem eligendi ratione reprehenderit dolor velit optio blanditiis, sequi eum!
-        Tempora magni modi incidunt sapiente repellat libero, laborum minima amet? Officiis inventore consequatur a. Quisquam labore placeat quod consectetur commodi sint at iste, recusandae ea ipsum eveniet aliquam, consequuntur quibusdam!
-    </p>
+<?php include 'data/posts.php' ?>
+<?php foreach ($posts as $post) : ?>
+    <article>
+        <h3><?php echo $post['title']; ?></h3>
+        <p>
+            <?php echo $post['content']; ?>
+        </p>
 
-</article>
+    </article>
+<?php endforeach; ?>
 <article>
     <h3>Title 2</h3>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores corporis, nam nostrum at eaque facilis, ipsum ducimus dignissimos maiores harum magni expedita sunt tempora quam, vel earum inventore nisi magnam!

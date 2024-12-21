@@ -1,7 +1,7 @@
 <?php
 
 
-$articles = array(
+$posts = array(
     [
         "title" => "Forest",
         "sub-title" => "The trees",
