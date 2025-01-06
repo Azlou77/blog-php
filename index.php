@@ -22,6 +22,13 @@
                 Else I like to visit historic museums, challenge myself with sport, learn in continu. In this project we will see how we construct it, with which tools ? But also see how to fix bugs, collaborate in teams, make plans about the applications etc...
             </p>
         </section>
+        <form action="" method="POST">
+            <label for="title">Title</label>
+            <input type="text" name="title" required />
+            <label for="content">Content</label>
+            <textarea name="content"></textarea>
+            <input type="submit" value="add" />
+        </form>
     </main>
 
     <?php include 'include/footer.php' ?>
