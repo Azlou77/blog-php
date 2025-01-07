@@ -21,7 +21,11 @@ nav ul{
 a{
     text-decoration: none;
     margin-left: 20px;
-    color: white;
+    color: black;
+
+}
+a.link-button{
+    background-color: #F72C5B;
 }
 
 

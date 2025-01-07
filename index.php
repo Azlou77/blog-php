@@ -9,29 +9,32 @@
 </head>
 
 <body>
-
-
     <?php include 'include/header.php' ?>
-    <!-- Page Content -->
-    <?php include 'include/gestion.php'; ?>
-    <main>
-        <h2>Presentation</h2>
-        <section id="presentation">
-            <img src="assets/images/louis.jpg">
-            <p>Hi I'm Louis a developpper fullstack. I would like to reinforce my skills in languages like JAVA, PHP, JavaScripts but also learn the tools like Docker, Github, Figma, databases etc ...
-                Else I like to visit historic museums, challenge myself with sport, learn in continu. In this project we will see how we construct it, with which tools ? But also see how to fix bugs, collaborate in teams, make plans about the applications etc...
-            </p>
-        </section>
-        <form action="add.php" method="POST">
-            <label for="title">Title</label>
-            <input type="text" name="title" required />
-            <label for="content">Content</label>
-            <textarea name="content"></textarea>
-            <input type="submit" value="add" />
-        </form>
-    </main>
+    <?php include 'connexion.php' ?>
+    <?php
+    $request = "SELECT * FROM articles";
+    $query = mysqli_query($connexion, $request);
+    while ($row = mysqli_fetch_array($query)) : ?>
 
-    <?php include 'include/footer.php' ?>
+
+        <main>
+            <h2><?php echo $row['title']; ?></h2>
+            <section id="presentation">
+                <img src="assets/images/louis.jpg">
+                <p><?php echo $row['content']; ?>
+                </p>
+                <a class="link-button" href="add.php">Add</a>
+                <a class="link-button" href="delete.php?id=<?php echo $row['id']; ?>">Supprimer</a>
+                <a class="link-button" href="update.php?id=<?php echo $row['id']; ?>">Modifier</a>
+            </section>
+        <?php endwhile ?>
+
+        </main>
+
+        <?php include 'include/footer.php' ?>
+
 </body>
+
+
 
 </html>
