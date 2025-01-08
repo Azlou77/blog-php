@@ -24,11 +24,19 @@ a{
     color: white;
 
 }
-a.link-button{
+.link-button{
+    display: flex;
+    justify-content: center;
+}
+.link-button a{
     background-color: #F72C5B;
+
     
 }
-
+p{
+    display: flex;
+    justify-content: center;
+}
 
 /* presentation section */
 
