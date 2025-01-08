@@ -2,13 +2,13 @@
 <h2>Update data</h2>
 <?php include 'connexion.php';
 $id = $_GET['id'];
-$request = "SELECT title,content FROM articles WHERE id='$id'";
+$request = "SELECT (title,content) FROM posts WHERE id='$id'";
 $query = mysqli_query($connexion, $request);
 $row = mysqli_fetch_array($query);
 $title = $row['title'];
 $content = $row['content'];
 
-$request = "UPDATE articles SET title='$title', content='$content' WHERE id='$id'";
+$request = "UPDATE posts SET title='$title', content='$content' WHERE id='$id'";
 $updateQuery = mysqli_query($connexion, $request);
 ?>
 

@@ -19,7 +19,7 @@
         <img src="assets/images/louis.jpg">
         <?php include 'connexion.php' ?>
         <?php
-        $request = "SELECT * FROM articles";
+        $request = "SELECT * FROM posts";
         $query = mysqli_query($connexion, $request);
         while ($row = mysqli_fetch_array($query)) : ?>
             <h2><?php echo $row['title']; ?></h2>
@@ -30,6 +30,7 @@
                 <a class="link-button" href="add.php">Add</a>
                 <a class="link-button" href="delete.php?id=<?php echo $row['id']; ?>">Supprimer</a>
                 <a class="link-button" href="update.php?id=<?php echo $row['id']; ?>">Modifier</a>
+                <a class="link-button" href="add_category.php">Add category</a>
             </section>
         <?php endwhile ?>
 
