@@ -9,18 +9,22 @@
 </head>
 
 <body>
-    <?php include 'include/header.php' ?>
-    <?php include 'connexion.php' ?>
-    <?php
-    $request = "SELECT * FROM articles";
-    $query = mysqli_query($connexion, $request);
-    while ($row = mysqli_fetch_array($query)) : ?>
 
 
-        <main>
+
+    <main>
+
+
+        <?php include 'include/header.php' ?>
+        <img src="assets/images/louis.jpg">
+        <?php include 'connexion.php' ?>
+        <?php
+        $request = "SELECT * FROM articles";
+        $query = mysqli_query($connexion, $request);
+        while ($row = mysqli_fetch_array($query)) : ?>
             <h2><?php echo $row['title']; ?></h2>
             <section id="presentation">
-                <img src="assets/images/louis.jpg">
+
                 <p><?php echo $row['content']; ?>
                 </p>
                 <a class="link-button" href="add.php">Add</a>
@@ -29,9 +33,9 @@
             </section>
         <?php endwhile ?>
 
-        </main>
+    </main>
 
-        <?php include 'include/footer.php' ?>
+    <?php include 'include/footer.php' ?>
 
 </body>
 

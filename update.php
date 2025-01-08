@@ -16,7 +16,7 @@ $updateQuery = mysqli_query($connexion, $request);
     <label for="title">Title</label>
     <input type="text" name="title" value="<?php echo $row['title']; ?>" />
     <label for="content">Content</label>
-    <textarea name="content" value="<?php echo $row['content']; ?>"></textarea>
+    <textarea name="content"><?php echo $row['content']; ?></textarea>
     <input type="submit" value="update" />
 </form>
 
