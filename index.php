@@ -9,48 +9,46 @@
 </head>
 
 <body>
-
-
-
     <main>
+        <?php include 'include/header.php'; ?>
+        <?php include 'connexion.php'; ?>
 
-
-        <?php include 'include/header.php' ?>
-        <img src="assets/images/louis.jpg">
-        <?php include 'connexion.php'  ?>
         <h2>Posts list</h2>
-        <?php
-        $request = "SELECT id,title, content FROM posts";
-        $query = mysqli_query($connexion, $request);
-        while ($row = mysqli_fetch_array($query)) : ?>
-            <h2><?php echo $row['title']; ?></h2>
+        <div class="container">
+            <?php
+            $request = "SELECT id, title, content FROM posts";
+            $query = mysqli_query($connexion, $request);
+            if ($query) {
+                while ($row = mysqli_fetch_array($query)) : ?>
+                    <!-- card -->
+                    <div class="card">
+                        <!-- card header -->
+                        <div class="card-header">
+                            <h2><?php echo htmlspecialchars($row['title']); ?></h2>
+                        </div>
 
-            <p><?php echo $row['content']; ?></p>
+                        <!-- card content -->
+                        <div class="card-content">
+                            <p><?php echo htmlspecialchars($row['content']); ?></p>
+                        </div>
 
-            <div class="link-button">
-                <a href="add.php">Add</a>
-                <a href="delete.php?id=<?php echo $row['id']; ?>">Supprimer</a>
-                <a href="update.php?id=<?php echo  $row['id'];  ?>">Modifier</a>
-            </div>
-
-        <?php endwhile ?>
-        <h2>List categories</h2>
-        <?php
-        $request = "SELECT category_name FROM category";
-        $query = mysqli_query($connexion, $request);
-        while ($row = mysqli_fetch_array($query)) : ?>
-            <h3><?php echo $row['category_name']; ?></h3>
-
-            <a class="link-button" href="add_category.php">Add category</a>
-        <?php endwhile ?>
-
-
+                        <!-- card footer -->
+                        <div class="card-footer">
+                            <div class="link-button">
+                                <a class="btn" href="add.php">Add</a>
+                                <a href="delete.php?id=<?php echo $row['id']; ?>">Supprimer</a>
+                                <a href="update.php?id=<?php echo $row['id']; ?>">Modifier</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end card -->
+            <?php endwhile;
+            } else {
+                echo "Erreur lors de la récupération des posts : " . mysqli_error($connexion);
+            }
+            ?>
+        </div>
     </main>
-
-    <?php include 'include/footer.php' ?>
-
 </body>
-
-
 
 </html>
